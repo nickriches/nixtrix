@@ -4,9 +4,11 @@
 \alias{p2apa}
 \title{Report p-value in APA style}
 \usage{
-p2apa(x)
+p2apa(p, stars)
 }
 \arguments{
+\item{stars}{Optional argument. Logical (TRUE/FALSE)}
+
 \item{p-value}{Numeric}
 }
 \value{
@@ -14,4 +16,5 @@ A character vector, e.g. "p = 0.123"
 }
 \description{
 Uses "p < 0.001" if p-value less than 0.001. Otherwise outputs "p = 0.123" (note 3 decimal places)
+stars = TRUE option adds stars where appropriate.
 }
