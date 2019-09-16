@@ -1,10 +1,4 @@
 
-get_optional_argument <- function(x){
-  if(missing(x)) return(NULL)
-  if(!missing(x)) return(x)
-}
-
-
 #' Report p-value in APA style
 #'
 #' Uses "p < 0.001" if p-value less than 0.001. Otherwise outputs "p = 0.123" (note 3 decimal places)
