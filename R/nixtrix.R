@@ -7,6 +7,9 @@
 #' @param p-value Numeric
 #' @param stars Optional argument. Logical (TRUE/FALSE)
 #' @return A character vector, e.g. "p = 0.123"
+#' @name p2apa
+#' @export
+
 
 p2apa <- function(p, stars){
   if(p < 0.001) pstring = "p < 0.001"
@@ -26,9 +29,10 @@ p2apa <- function(p, stars){
 #' @param model Output of corr.test function
 #' @param stars Optional argument. logical = TRUE if stars are required for p-values
 #' @return A character vector, e.g. "r(12) = 0.12, p = 0.123"
-#'
+#' @name cor.test2apa
+#' @export
 
-corr.test2apa <- function(x, stars){
+cor.test2apa <- function(x, stars){
     return(paste0("r(", x$parameter, ") = ", round(x$estimate, 2), ", ",
                   p2apa(x$p.value, stars)))
   }
